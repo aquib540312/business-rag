@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head><title>Business Q&A - Mistral</title></head>
+<body style="font-family:Arial; padding:30px;">
+<h2>Ask Business Question</h2>
+<form method="POST">
+    <input name="question" style="width:400px;" placeholder="Type your question..." required/>
+    <button type="submit">Ask</button>
+</form>
+{% if answer %}
+    <hr/>
+    <h3>Answer:</h3>
+    <p>{{ answer }}</p>
+    <p><b>Tokens sent:</b> {{ tokens_sent }} | <b>Tokens received:</b> {{ tokens_received }}</p>
+{% endif %}
+</body>
+</html>

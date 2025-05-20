@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Business Q&A</title>
+  <style>
+    body { font-family: Arial; padding: 30px; background: #f7f7f7; }
+    form { margin-bottom: 20px; }
+    input[type="text"] { width: 60%; padding: 10px; }
+    input[type="submit"] { padding: 10px 20px; }
+    .result { background: #fff; padding: 20px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Ask about our business</h1>
+  <form method="POST">
+    <input type="text" name="question" placeholder="Enter your question..." required>
+    <input type="submit" value="Ask">
+  </form>
+
+  {% if answer %}
+  <div class="result">
+    <h3>Your Question:</h3>
+    <p>{{ question }}</p>
+    <h3>Answer:</h3>
+    <p>{{ answer }}</p>
+    <p><small>Tokens sent: {{ tokens_sent }} | Tokens received: {{ tokens_received }}</small></p>
+  </div>
+  {% endif %}
+</body>
+</html>

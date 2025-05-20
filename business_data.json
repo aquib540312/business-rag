@@ -1,0 +1,16 @@
+{
+    "company": "AlphaMed Clinics",
+    "services": [
+        "General Checkup",
+        "Lab Tests",
+        "Vaccination"
+    ],
+    "location": "Riyadh, Saudi Arabia",
+    "contact": "info@alphamed.sa",
+    "working_hours": "10am - 12pm",
+    "insurance": [
+        "Bupa",
+        "Tawuniya",
+        "Medgulf"
+    ]
+}
