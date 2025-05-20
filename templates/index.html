@@ -1,17 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head><title>Business Q&A - Mistral</title></head>
-<body style="font-family:Arial; padding:30px;">
-<h2>Ask Business Question</h2>
-<form method="POST">
-    <input name="question" style="width:400px;" placeholder="Type your question..." required/>
-    <button type="submit">Ask</button>
-</form>
-{% if answer %}
-    <hr/>
-    <h3>Answer:</h3>
-    <p>{{ answer }}</p>
-    <p><b>Tokens sent:</b> {{ tokens_sent }} | <b>Tokens received:</b> {{ tokens_received }}</p>
-{% endif %}
+<head>
+    <title>Business QA</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: auto; padding: 30px; }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; }
+        #answer { background: #f2f2f2; padding: 10px; margin-top: 10px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h2>Ask Business Questions</h2>
+    <input type="text" id="question" placeholder="Enter your question..." />
+    <button onclick="ask()">Ask</button>
+    <div id="answer"></div>
+
+    <script>
+        async function ask() {
+            const question = document.getElementById("question").value;
+            const res = await fetch("/api", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ question })
+            });
+            const data = await res.json();
+            document.getElementById("answer").innerText = data.answer;
+        }
+    </script>
 </body>
 </html>
