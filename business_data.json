@@ -1,16 +1,9 @@
 {
-    "company": "AlphaMed Clinics",
-    "services": [
-        "General Checkup",
-        "Lab Tests",
-        "Vaccination"
-    ],
-    "location": "Riyadh, Saudi Arabia",
-    "contact": "info@alphamed.sa",
-    "working_hours": "10am - 12pm",
-    "insurance": [
-        "Bupa",
-        "Tawuniya",
-        "Medgulf"
-    ]
+  "business_name": "Al Shifa Clinic",
+  "timings": "Daily 10 AM to 12 PM",
+  "services": ["General Checkup", "Insurance Processing", "Vaccination"],
+  "location": "Riyadh, Saudi Arabia",
+  "contact": "+966-500000000",
+  "insurance_info": "We accept Bupa and Tawuniya insurance policies.",
+  "doctors": ["Dr. Ahmed (GP)", "Dr. Sara (Dentist)"]
 }
