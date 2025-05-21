@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask, request, jsonify, render_template
 from sentence_transformers import SentenceTransformer
 import faiss
@@ -6,16 +5,14 @@ import numpy as np
 import json
 import requests
 import tiktoken
-=======
 from flask import Flask, render_template, request
 import faiss
 import numpy as np
->>>>>>> 5870db92bc4e989e40d19ddc4d77e8e029c9015c
+
 
 # Flask app
 app = Flask(__name__)
 
-<<<<<<< HEAD
 # Mistral API Key
 MISTRAL_API_KEY = "cRXfDbOI8iauSUlzCY8PWHZoUA5x8X0u"
 
@@ -94,7 +91,7 @@ def get_answer():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
-=======
+
 # Load FAISS index once at startup
 faiss_index = faiss.read_index("your_index_file.index")  # Make sure this file exists
 
@@ -114,4 +111,3 @@ def home():
 
 if __name__ == '__main__':
     app.run(debug=True)
->>>>>>> 5870db92bc4e989e40d19ddc4d77e8e029c9015c
