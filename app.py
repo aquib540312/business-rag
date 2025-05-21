@@ -9,7 +9,6 @@ from flask import Flask, render_template, request
 import faiss
 import numpy as np
 
-
 # Flask app
 app = Flask(__name__)
 
